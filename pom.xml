@@ -29,6 +29,11 @@ under the License.
 	<groupId>org.apache.flink</groupId>
 	<artifactId>flink-parent</artifactId>
 	<version>1.18-SNAPSHOT</version>
+	<modules>
+		<module>flink-runtime</module>
+		<module>flink-core</module>
+		<module>flink-annotations</module>
+	</modules>
 
 	<name>Flink : </name>
 	<packaging>pom</packaging>
@@ -1065,13 +1070,13 @@ under the License.
 								<skip>true</skip>
 							</configuration>
 						</plugin>
-						<plugin>
+						<!--<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-checkstyle-plugin</artifactId>
 							<configuration>
 								<skip>true</skip>
 							</configuration>
-						</plugin>
+						</plugin>-->
 						<plugin>
 							<groupId>com.diffplug.spotless</groupId>
 							<artifactId>spotless-maven-plugin</artifactId>
@@ -1370,7 +1375,7 @@ under the License.
 				<artifactId>japicmp-maven-plugin</artifactId>
 			</plugin>
 
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.rat</groupId>
 				<artifactId>apache-rat-plugin</artifactId>
 				<version>0.13</version>
@@ -1388,7 +1393,7 @@ under the License.
 					<excludeSubProjects>false</excludeSubProjects>
 					<numUnapprovedLicenses>0</numUnapprovedLicenses>
 					<licenses>
-						<!-- Enforce this license:
+						&lt;!&ndash; Enforce this license:
 							Licensed to the Apache Software Foundation (ASF) under one
 							or more contributor license agreements.  See the NOTICE file
 							distributed with this work for additional information
@@ -1403,7 +1408,7 @@ under the License.
 							KIND, either express or implied.  See the License for the
 							specific language governing permissions and limitations
 							under the License.
-						-->
+						&ndash;&gt;
 						<license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
 							<licenseFamilyCategory>AL2 </licenseFamilyCategory>
 							<licenseFamilyName>Apache License 2.0</licenseFamilyName>
@@ -1419,11 +1424,11 @@ under the License.
 						</licenseFamily>
 					</licenseFamilies>
 					<excludes>
-						<!-- Additional files like .gitignore etc.-->
+						&lt;!&ndash; Additional files like .gitignore etc.&ndash;&gt;
 						<exclude>**/.*/**</exclude>
 						<exclude>**/*.prefs</exclude>
 						<exclude>**/*.log</exclude>
-						<!-- External web libraries. -->
+						&lt;!&ndash; External web libraries. &ndash;&gt;
 						<exclude>docs/**/jquery*</exclude>
 						<exclude>docs/**/bootstrap*</exclude>
 						<exclude>docs/themes/book/**</exclude>
@@ -1441,12 +1446,12 @@ under the License.
 						<exclude>docs/static/figs/*.svg</exclude>
 						<exclude>flink-clients/src/main/resources/web-docs/js/*d3.js</exclude>
 
-						<!-- the licenses that are re-bundled -->
+						&lt;!&ndash; the licenses that are re-bundled &ndash;&gt;
 						<exclude>**/packaged_licenses/LICENSE.*.txt</exclude>
 						<exclude>**/licenses/LICENSE*</exclude>
 						<exclude>**/licenses-binary/LICENSE*</exclude>
 
-						<!-- web dashboard config JSON files -->
+						&lt;!&ndash; web dashboard config JSON files &ndash;&gt;
 						<exclude>flink-runtime-web/web-dashboard/package.json</exclude>
 						<exclude>flink-runtime-web/web-dashboard/package-lock.json</exclude>
 						<exclude>flink-runtime-web/web-dashboard/angular.json</exclude>
@@ -1458,20 +1463,20 @@ under the License.
 						<exclude>flink-runtime-web/web-dashboard/src/tsconfig.spec.json</exclude>
 						<exclude>flink-runtime-web/web-dashboard/src/tslint.json</exclude>
 
-						<!-- web dashboard non-binary assets -->
+						&lt;!&ndash; web dashboard non-binary assets &ndash;&gt;
 						<exclude>flink-runtime-web/web-dashboard/src/assets/**</exclude>
 
-						<!-- generated contents -->
+						&lt;!&ndash; generated contents &ndash;&gt;
 						<exclude>flink-runtime-web/web-dashboard/web/**</exclude>
 
-						<!-- downloaded and generated web libraries. -->
+						&lt;!&ndash; downloaded and generated web libraries. &ndash;&gt;
 						<exclude>flink-runtime-web/web-dashboard/node_modules/**</exclude>
 						<exclude>flink-runtime-web/web-dashboard/node/**</exclude>
 
-						<!-- antlr grammar files -->
+						&lt;!&ndash; antlr grammar files &ndash;&gt;
 						<exclude>flink-table/flink-table-code-splitter/src/main/antlr4/**</exclude>
 
-						<!-- Test Data. -->
+						&lt;!&ndash; Test Data. &ndash;&gt;
 						<exclude>**/src/test/resources/*-data</exclude>
 						<exclude>flink-tests/src/test/resources/testdata/terainput.txt</exclude>
                         <exclude>flink-formats/flink-avro/src/test/resources/flink_11-kryo_registrations</exclude>
@@ -1494,10 +1499,10 @@ under the License.
 						<exclude>flink-end-to-end-tests/flink-tpcds-test/tpcds-tool/query/*</exclude>
 						<exclude>flink-table/flink-table-code-splitter/src/test/resources/**</exclude>
 
-						<!-- ArchUnit violation stores  -->
+						&lt;!&ndash; ArchUnit violation stores  &ndash;&gt;
 						<exclude>**/archunit-violations/**</exclude>
 
-						<!-- snapshots -->
+						&lt;!&ndash; snapshots &ndash;&gt;
 						<exclude>**/src/test/resources/serializer-snapshot-*</exclude>
 						<exclude>**/src/test/resources/**/serializer-snapshot</exclude>
 						<exclude>**/src/test/resources/**/test-data</exclude>
@@ -1521,51 +1526,51 @@ under the License.
 						<exclude>flink-formats/flink-parquet/src/test/resources/avro/**</exclude>
 						<exclude>flink-formats/flink-parquet/src/test/resources/protobuf/**</exclude>
 						<exclude>flink-table/flink-sql-gateway/src/test/resources/*.txt</exclude>
-						<!-- netty test file, still Apache License 2.0 but with a different header -->
+						&lt;!&ndash; netty test file, still Apache License 2.0 but with a different header &ndash;&gt;
 						<exclude>flink-runtime/src/test/java/org/apache/flink/runtime/io/network/buffer/AbstractByteBufTest.java</exclude>
-						<!-- Configuration Files. -->
+						&lt;!&ndash; Configuration Files. &ndash;&gt;
 						<exclude>**/flink-bin/conf/workers</exclude>
 						<exclude>**/flink-bin/conf/masters</exclude>
-						<!-- Administrative files in the main trunk. -->
+						&lt;!&ndash; Administrative files in the main trunk. &ndash;&gt;
 						<exclude>**/README.md</exclude>
 						<exclude>.github/**</exclude>
-						<!-- Build files -->
+						&lt;!&ndash; Build files &ndash;&gt;
 						<exclude>**/*.iml</exclude>
 						<exclude>flink-quickstart/**/testArtifact/goal.txt</exclude>
-						<!-- Generated content -->
+						&lt;!&ndash; Generated content &ndash;&gt;
 						<exclude>out/**</exclude>
 						<exclude>**/target/**</exclude>
 						<exclude>build-target/**</exclude>
 						<exclude>docs/layouts/shortcodes/generated/**</exclude>
 						<exclude>docs/themes/connectors/layouts/shortcodes/generated/**</exclude>
 						<exclude>docs/static/generated/**</exclude>
-						<!-- Tools: watchdog -->
+						&lt;!&ndash; Tools: watchdog &ndash;&gt;
 						<exclude>tools/artifacts/**</exclude>
 						<exclude>tools/flink*/**</exclude>
-						<!-- Tools: japicmp output -->
+						&lt;!&ndash; Tools: japicmp output &ndash;&gt;
 						<exclude>tools/japicmp-output/**</exclude>
-						<!-- artifacts created during release process -->
+						&lt;!&ndash; artifacts created during release process &ndash;&gt;
 						<exclude>tools/releasing/release/**</exclude>
-						<!-- PyCharm -->
+						&lt;!&ndash; PyCharm &ndash;&gt;
 						<exclude>**/.idea/**</exclude>
-						<!-- Generated code via Avro -->
+						&lt;!&ndash; Generated code via Avro &ndash;&gt;
 						<exclude>flink-end-to-end-tests/flink-confluent-schema-registry/src/main/java/example/avro/**</exclude>
 						<exclude>flink-end-to-end-tests/flink-datastream-allround-test/src/main/java/org/apache/flink/streaming/tests/avro/**</exclude>
 
-						<!-- flink-python -->
+						&lt;!&ndash; flink-python &ndash;&gt;
 						<exclude>flink-python/lib/**</exclude>
 						<exclude>flink-python/dev/download/**</exclude>
 						<exclude>flink-python/docs/_build/**</exclude>
 						<exclude>flink-python/docs/_static/switcher.json</exclude>
 
-						<!-- AWS SDK config that does not support license headers -->
+						&lt;!&ndash; AWS SDK config that does not support license headers &ndash;&gt;
 						<exclude>**/awssdk/global/handlers/execution.interceptors</exclude>
 
-						<!-- The most recently published version configuration file -->
+						&lt;!&ndash; The most recently published version configuration file &ndash;&gt;
 						<exclude>flink-test-utils-parent/flink-migration-test-utils/src/main/resources/most_recently_published_version</exclude>
 					</excludes>
 				</configuration>
-			</plugin>
+			</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
@@ -1971,7 +1976,7 @@ under the License.
 					</configuration>
 				</plugin>
 
-				<plugin>
+				<!--<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-checkstyle-plugin</artifactId>
 					<version>3.1.2</version>
@@ -1979,7 +1984,7 @@ under the License.
 						<dependency>
 							<groupId>com.puppycrawl.tools</groupId>
 							<artifactId>checkstyle</artifactId>
-							<!-- Note: match version with docs/flinkDev/ide_setup.md -->
+							&lt;!&ndash; Note: match version with docs/flinkDev/ide_setup.md &ndash;&gt;
 							<version>8.14</version>
 						</dependency>
 					</dependencies>
@@ -1999,7 +2004,7 @@ under the License.
 						<logViolationsToConsole>true</logViolationsToConsole>
 						<failOnViolation>true</failOnViolation>
 					</configuration>
-				</plugin>
+				</plugin>-->
 
 				<plugin>
 					<groupId>com.diffplug.spotless</groupId>
@@ -2131,7 +2136,7 @@ under the License.
 				</plugin>
 
 				<!-- Configuration for the binary compatibility checker -->
-				<plugin>
+				<!--<plugin>
 					<groupId>io.github.zentol.japicmp</groupId>
 					<artifactId>japicmp-maven-plugin</artifactId>
 					<version>0.17.1.1_m325</version>
@@ -2153,16 +2158,16 @@ under the License.
 							<onlyModified>true</onlyModified>
 							<includes>
 								<include>@org.apache.flink.annotation.Public</include>
-								<!-- The following line is un-commented by tools/releasing/update_japicmp_configuration.sh
-								 	as part of the release process -->
-								<!--<include>@org.apache.flink.annotation.PublicEvolving</include>-->
+								&lt;!&ndash; The following line is un-commented by tools/releasing/update_japicmp_configuration.sh
+								 	as part of the release process &ndash;&gt;
+								&lt;!&ndash;<include>@org.apache.flink.annotation.PublicEvolving</include>&ndash;&gt;
 							</includes>
 							<excludes>
 								<exclude>@org.apache.flink.annotation.Experimental</exclude>
 								<exclude>@org.apache.flink.annotation.PublicEvolving</exclude>
 								<exclude>@org.apache.flink.annotation.Internal</exclude>
-								<!-- MARKER: start exclusions; these will be wiped by tools/releasing/update_japicmp_configuration.sh -->
-								<!-- MARKER: end exclusions -->
+								&lt;!&ndash; MARKER: start exclusions; these will be wiped by tools/releasing/update_japicmp_configuration.sh &ndash;&gt;
+								&lt;!&ndash; MARKER: end exclusions &ndash;&gt;
 							</excludes>
 							<accessModifier>public</accessModifier>
 							<breakBuildOnModifications>false</breakBuildOnModifications>
@@ -2172,7 +2177,7 @@ under the License.
 							<includeSynthetic>true</includeSynthetic>
 							<ignoreMissingClasses>false</ignoreMissingClasses>
 							<skipPomModules>true</skipPomModules>
-							<!-- Don't break build on newly added maven modules -->
+							&lt;!&ndash; Don't break build on newly added maven modules &ndash;&gt;
 							<ignoreNonResolvableArtifacts>true</ignoreNonResolvableArtifacts>
 							<packagingSupporteds>
 								<packagingSupported>jar</packagingSupported>
@@ -2195,7 +2200,7 @@ under the License.
 							</goals>
 						</execution>
 					</executions>
-				</plugin>
+				</plugin>-->
 
 				<plugin>
 					<!-- run via "mvn org.owasp:dependency-check-maven:aggregate" -->

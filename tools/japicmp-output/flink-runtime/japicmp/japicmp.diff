@@ -1,0 +1,17 @@
+Comparing source compatibility of /Users/guanzhihua/develop/workspace/source/flink-simple-copy/flink-runtime/target/flink-runtime-1.18-SNAPSHOT.jar against /Users/guanzhihua/develop/repo/maven/org/apache/flink/flink-runtime/1.17.0/flink-runtime-1.17.0.jar
+---! REMOVED INTERFACE: PUBLIC(-) ABSTRACT(-) org.apache.flink.runtime.jobgraph.tasks.InputSplitProvider  (not serializable)
+	---  CLASS FILE FORMAT VERSION: n.a. <- 52.0
+	---! REMOVED SUPERCLASS: java.lang.Object
+	---! REMOVED METHOD: PUBLIC(-) ABSTRACT(-) org.apache.flink.core.io.InputSplit getNextInputSplit(java.lang.ClassLoader)
+		---  REMOVED EXCEPTION: org.apache.flink.runtime.jobgraph.tasks.InputSplitProviderException
+---! REMOVED INTERFACE: PUBLIC(-) ABSTRACT(-) org.apache.flink.runtime.state.CheckpointListener  (not serializable)
+	---  CLASS FILE FORMAT VERSION: n.a. <- 52.0
+	---! REMOVED INTERFACE: org.apache.flink.api.common.state.CheckpointListener
+	---! REMOVED SUPERCLASS: java.lang.Object
+	---  REMOVED ANNOTATION: java.lang.Deprecated
+---! REMOVED CLASS: PUBLIC(-) org.apache.flink.runtime.state.VoidNamespaceTypeInfo  (class removed)
+	---  CLASS FILE FORMAT VERSION: n.a. <- 52.0
+	---! REMOVED INTERFACE: java.io.Serializable
+	---! REMOVED SUPERCLASS: org.apache.flink.api.common.typeinfo.TypeInformation
+	---! REMOVED FIELD: PUBLIC(-) STATIC(-) FINAL(-) org.apache.flink.runtime.state.VoidNamespaceTypeInfo INSTANCE
+	---! REMOVED CONSTRUCTOR: PUBLIC(-) VoidNamespaceTypeInfo()

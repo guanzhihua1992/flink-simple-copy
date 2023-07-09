@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<japicmp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" accessModifier="PUBLIC" creationTimestamp="2023-07-04T09:26:58.912+0800" ignoreMissingClasses="false" ignoreMissingClassesByRegularExpressions="" newJar="/Users/guanzhihua/develop/workspace/source/flink-simple-copy/flink-runtime/target/flink-runtime-1.18-SNAPSHOT.jar" newVersion="n.a.-SNAPSHOT" oldJar="/Users/guanzhihua/develop/repo/maven/org/apache/flink/flink-runtime/1.17.0/flink-runtime-1.17.0.jar" oldVersion="1.17.0" onlyBinaryIncompatibleModifications="false" onlyModifications="true" packagesExclude="@org.apache.flink.annotation.Experimental;@org.apache.flink.annotation.Experimental;@org.apache.flink.annotation.Experimental;@org.apache.flink.annotation.Experimental;@org.apache.flink.annotation.Experimental;@org.apache.flink.annotation.PublicEvolving;@org.apache.flink.annotation.PublicEvolving;@org.apache.flink.annotation.PublicEvolving;@org.apache.flink.annotation.PublicEvolving;@org.apache.flink.annotation.PublicEvolving;@org.apache.flink.annotation.Internal;@org.apache.flink.annotation.Internal;@org.apache.flink.annotation.Internal;@org.apache.flink.annotation.Internal;@org.apache.flink.annotation.Internal" packagesInclude="@org.apache.flink.annotation.Public;@org.apache.flink.annotation.Public;@org.apache.flink.annotation.Public;@org.apache.flink.annotation.Public;@org.apache.flink.annotation.Public" semanticVersioning="1.0.0" title="Comparing source compatibility of /Users/guanzhihua/develop/workspace/source/flink-simple-copy/flink-runtime/target/flink-runtime-1.18-SNAPSHOT.jar against /Users/guanzhihua/develop/repo/maven/org/apache/flink/flink-runtime/1.17.0/flink-runtime-1.17.0.jar" xsi:noNamespaceSchemaLocation="japicmp.xsd">
+    <classes>
+        <class binaryCompatible="false" changeStatus="REMOVED" fullyQualifiedName="org.apache.flink.runtime.jobgraph.tasks.InputSplitProvider" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="REMOVED" majorVersionNew="-1" majorVersionOld="52" minorVersionNew="-1" minorVersionOld="0"/>
+            <classType changeStatus="REMOVED" newType="n.a." oldType="INTERFACE"/>
+            <compatibilityChanges>
+                <compatibilityChange>CLASS_REMOVED</compatibilityChange>
+            </compatibilityChanges>
+            <constructors/>
+            <fields/>
+            <genericTemplates/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="false" changeStatus="REMOVED" name="getNextInputSplit" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_REMOVED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="REMOVED" name="org.apache.flink.runtime.jobgraph.tasks.InputSplitProviderException"/>
+                    </exceptions>
+                    <genericTemplates/>
+                    <modifiers>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_FINAL"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_STATIC"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="PUBLIC"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="ABSTRACT"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters>
+                        <parameter binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" templateName="N/A" type="java.lang.ClassLoader">
+                            <compatibilityChanges/>
+                            <newGenericTypes/>
+                            <oldGenericTypes/>
+                        </parameter>
+                    </parameters>
+                    <returnType binaryCompatible="true" changeStatus="REMOVED" newValue="n.a." oldValue="org.apache.flink.core.io.InputSplit" sourceCompatible="true">
+                        <compatibilityChanges/>
+                        <newGenericTypes/>
+                        <oldGenericTypes/>
+                    </returnType>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_FINAL"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_STATIC"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="PUBLIC"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="ABSTRACT"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="false" changeStatus="REMOVED" sourceCompatible="false" superclassNew="n.a." superclassOld="java.lang.Object">
+                <compatibilityChanges>
+                    <compatibilityChange>SUPERCLASS_REMOVED</compatibilityChange>
+                </compatibilityChanges>
+            </superclass>
+        </class>
+        <class binaryCompatible="false" changeStatus="REMOVED" fullyQualifiedName="org.apache.flink.runtime.state.CheckpointListener" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
+            <annotations>
+                <annotation binaryCompatible="true" changeStatus="REMOVED" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                    <compatibilityChanges/>
+                    <elements/>
+                </annotation>
+            </annotations>
+            <attributes>
+                <attribute changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="REMOVED" majorVersionNew="-1" majorVersionOld="52" minorVersionNew="-1" minorVersionOld="0"/>
+            <classType changeStatus="REMOVED" newType="n.a." oldType="INTERFACE"/>
+            <compatibilityChanges>
+                <compatibilityChange>CLASS_REMOVED</compatibilityChange>
+            </compatibilityChanges>
+            <constructors/>
+            <fields/>
+            <genericTemplates/>
+            <interfaces>
+                <interface binaryCompatible="false" changeStatus="REMOVED" fullyQualifiedName="org.apache.flink.api.common.state.CheckpointListener" sourceCompatible="false">
+                    <compatibilityChanges>
+                        <compatibilityChange>INTERFACE_REMOVED</compatibilityChange>
+                    </compatibilityChanges>
+                </interface>
+            </interfaces>
+            <methods/>
+            <modifiers>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_FINAL"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_STATIC"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="PUBLIC"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="ABSTRACT"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="false" changeStatus="REMOVED" sourceCompatible="false" superclassNew="n.a." superclassOld="java.lang.Object">
+                <compatibilityChanges>
+                    <compatibilityChange>SUPERCLASS_REMOVED</compatibilityChange>
+                </compatibilityChanges>
+            </superclass>
+        </class>
+        <class binaryCompatible="false" changeStatus="REMOVED" fullyQualifiedName="org.apache.flink.runtime.state.VoidNamespaceTypeInfo" javaObjectSerializationCompatible="SERIALIZABLE_INCOMPATIBLE_CLASS_REMOVED" javaObjectSerializationCompatibleAsString="class removed" sourceCompatible="false">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="REMOVED" majorVersionNew="-1" majorVersionOld="52" minorVersionNew="-1" minorVersionOld="0"/>
+            <classType changeStatus="REMOVED" newType="n.a." oldType="CLASS"/>
+            <compatibilityChanges>
+                <compatibilityChange>CLASS_REMOVED</compatibilityChange>
+            </compatibilityChanges>
+            <constructors>
+                <constructor binaryCompatible="false" changeStatus="REMOVED" name="VoidNamespaceTypeInfo" newLineNumber="n.a." oldLineNumber="29" sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>CONSTRUCTOR_REMOVED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions/>
+                    <genericTemplates/>
+                    <modifiers>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_FINAL"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_STATIC"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="PUBLIC"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_ABSTRACT"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters/>
+                </constructor>
+            </constructors>
+            <fields>
+                <field binaryCompatible="false" changeStatus="REMOVED" name="INSTANCE" sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>FIELD_REMOVED</compatibilityChange>
+                    </compatibilityChanges>
+                    <modifiers>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="PUBLIC"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="STATIC"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="FINAL"/>
+                        <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <newGenericTypes/>
+                    <oldGenericTypes/>
+                    <type changeStatus="REMOVED" newValue="n.a." oldValue="org.apache.flink.runtime.state.VoidNamespaceTypeInfo"/>
+                </field>
+            </fields>
+            <genericTemplates/>
+            <interfaces>
+                <interface binaryCompatible="false" changeStatus="REMOVED" fullyQualifiedName="java.io.Serializable" sourceCompatible="false">
+                    <compatibilityChanges>
+                        <compatibilityChange>INTERFACE_REMOVED</compatibilityChange>
+                    </compatibilityChanges>
+                </interface>
+            </interfaces>
+            <methods/>
+            <modifiers>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_FINAL"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_STATIC"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="PUBLIC"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_ABSTRACT"/>
+                <modifier changeStatus="REMOVED" newValue="n.a." oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="9127865114470423001" serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="5453679706408610586" serializableNew="false" serializableOld="true"/>
+            <superclass binaryCompatible="false" changeStatus="REMOVED" sourceCompatible="false" superclassNew="n.a." superclassOld="org.apache.flink.api.common.typeinfo.TypeInformation">
+                <compatibilityChanges>
+                    <compatibilityChange>SUPERCLASS_REMOVED</compatibilityChange>
+                </compatibilityChanges>
+            </superclass>
+        </class>
+    </classes>
+</japicmp>
